@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_puthex_upper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecoelho- <ecoelho-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 17:42:25 by ecoelho-          #+#    #+#             */
-/*   Updated: 2023/09/20 22:29:20 by ecoelho-         ###   ########.fr       */
+/*   Created: 2023/09/20 18:34:17 by ecoelho-          #+#    #+#             */
+/*   Updated: 2023/09/22 16:27:02 by ecoelho-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
+int	ft_puthex_upper(unsigned int nbr)
+{
+	char	*base;
+	int		count;
 
-int	ft_printf(const char *format, ...);
-int	ft_putchar(int c);
-int	ft_putstr(char *s);
-int	ft_putnbr(long nbr);
-int	ft_putnbr_unsigned(unsigned int nbr);
-int	ft_puthex(unsigned int nbr);
-int	ft_puthex_upper(unsigned int nbr);
-int	ft_putptr(unsigned long nbr);
-
-#endif
+	count = 0;
+	base = "0123456789ABCDEF";
+	if (nbr > 15)
+		count += ft_puthex_upper(nbr / 16);
+	count += write(1, nbr % 16 + base, 1);
+	return (count);
+}

@@ -6,7 +6,7 @@
 /*   By: ecoelho- <ecoelho-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:42:34 by ecoelho-          #+#    #+#             */
-/*   Updated: 2023/09/20 22:19:03 by ecoelho-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:26:53 by ecoelho-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	print_format(char specifier, va_list ap)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (specifier == 'c')
@@ -35,7 +35,6 @@ int	print_format(char specifier, va_list ap)
 		count += ft_puthex_upper(va_arg(ap, unsigned int));
 	else if (specifier == '%')
 		count += ft_putchar('%');
-	
 	return (count);
 }
 

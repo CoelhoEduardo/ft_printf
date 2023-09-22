@@ -29,6 +29,5 @@ int	ft_putnbr(long nbr)
 	}
 	else
 		count += ft_putchar(nbr + 48);
-	
 	return (count);
 }
