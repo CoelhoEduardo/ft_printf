@@ -1,35 +1,37 @@
-# ft_printf
+# PRINTF FUNCTION PROJECT
 
 ![ft_printfe](https://github.com/CoelhoEduardo/ft_printf/assets/76714413/40949933-f101-48b1-949d-bc1c3a6a7e1b)
 
+## DESCRIPTION
 
-This is my ´printf()´ function, this a simple mimic of the original, 
-I can say, this is a mini printf(); because the original can do much more...
+This is my ´printf()´ function implementation. The task here, it's to do a simple and basic printf that's covers just the simple flags:
 
-My function treats only the basic specifier flags to convert: 
+ - %c = char;
 
-%c = char;
+ - %s = string;
 
-%s = string;
+ - %p = pointers in hexadecimal;
 
-%p = pointers in hexadecimal;
+ - %i = integers;
 
-%i = integers;
+ - %d = decimal;
 
-%d = decimal;
+ - %u = unsigned integers;
 
-%u = unsigned integers;
+ - %x = hexadecimal;
 
-%x = hexadecimal;
+ - %X = hexadecimal Upper;
 
-%X = hexadecimal Upper;
+ - %% = prints `%`
 
-%% = prints `%`
-
-* To Run:
+### How to test the project:
   
--> Create your own `main.c` or using my own;
-  
+1. **Clone this repository** and make sure you have a C compiler installed.
+
+2. **Use my `main.c` that covers all the uses cases** (or create your own):
+
+3. **Run the makefile**  
+
 -> `make`;
 
--> `cc main.c libftprintf.a`; 
+-> `./libftprintf.a`; 
